@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 224 71.4% 4.1%;
+  --foreground: 210 20% 98%;
+  --card: 224 71.4% 4.1%;
+  --card-foreground: 210 20% 98%;
+  --popover: 224 71.4% 4.1%;
+  --popover-foreground: 210 20% 98%;
+  --primary: 217.2 91.2% 59.8%;
+  --primary-foreground: 210 20% 98%;
+  --secondary: 215 27.9% 16.9%;
+  --secondary-foreground: 210 20% 98%;
+  --muted: 215 27.9% 16.9%;
+  --muted-foreground: 217.9 10.6% 64.9%;
+  --accent: 215 27.9% 16.9%;
+  --accent-foreground: 210 20% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 20% 98%;
+  --border: 215 27.9% 16.9%;
+  --input: 215 27.9% 16.9%;
+  --ring: 217.2 91.2% 59.8%;
+  --radius: 0.75rem;
+}
+
+body {
+  background: hsl(var(--background));
+  font-family: 'Inter', sans-serif;
+  color: hsl(var(--foreground));
+  min-height: 100vh;
+}
+
+.glass-effect {
+  background-color: rgba(17, 24, 39, 0.5);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #818cf8 0%, #c084fc 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.points-badge {
+  background: linear-gradient(135deg, #facc15 0%, #fbbf24 100%);
+  color: #111827;
+  font-weight: 600;
+}
+
+.feature-card {
+  background-color: hsla(223, 39%, 12%, 0.5);
+  border: 1px solid hsla(223, 24%, 22%, 1);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  background-color: hsla(223, 39%, 15%, 0.7);
+  border-color: hsla(223, 24%, 32%, 1);
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link.active {
+  color: #818cf8;
+  background-color: rgba(79, 70, 229, 0.1);
+}
+
+.profile-card {
+  background: linear-gradient(135deg, rgba(55, 65, 81, 0.2) 0%, rgba(79, 70, 229, 0.1) 100%);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.post-card {
+  background-color: hsla(223, 39%, 10%, 0.5);
+  border: 1px solid hsla(223, 24%, 20%, 1);
+}
+
+.question-card {
+  background-color: hsla(223, 39%, 10%, 0.5);
+  border: 1px solid hsla(223, 24%, 20%, 1);
+  transition: all 0.3s ease;
+}
+
+.question-card:hover {
+  background-color: hsla(223, 39%, 12%, 0.7);
+  border-color: hsla(223, 24%, 30%, 1);
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
